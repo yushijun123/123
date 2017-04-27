@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<a href="#">aaa</a>
+			<p>111</p>
+			<p>222</p>
+			<p>333</p>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+	<script type="text/javascript">
+		/*
+		 * eq() 筛选出第几个 
+		 * 		接收数字参数，筛选出第几个，返回一个Jquery对象
+		 * 		$obj.eq(2).css('color','red');
+		 * 
+		 * 
+		 * .size() / .length
+		 * 	 不需要参数，返回一个数字，代表包含的节点个数
+		 * 	 .size()在3.0以上的版本没有了
+		 * 	 alert($obj.size())
+		 * 
+		 * 	.index()
+		 * 		获取元素的序列号
+		 * 		在不接收参数的时候，获取的是元素处于父级中的序列号
+		 * 		可以接收选择器字符串参数，返回处于该组元素中的序列号
+		 
+		 	jQueryAPI操作完后，有的是固定返回的
+		 
+		 * */
+		
+//		var $obj=$('#box p');
+//		$obj.eq(2).css('color','red');
+		
+//		var $obj=$('#box p'); 
+//		
+////		alert($obj.size())//返回的是一个数字
+//		alert($obj.length)//返回的是一个数字
+		$("#box p").click(function(){
+			var index=$(this).index("#box p");
+			alert(index)
+		})
+	</script>
+</html>
